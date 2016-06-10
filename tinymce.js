@@ -16160,6 +16160,39 @@ define("tinymce/geom/ClientRect", [], function() {
 	};
 });
 
+// Included from: js/tinymce/classes/text/ExtendingChar.js
+
+/**
+ * ExtendingChar.js
+ *
+ * Released under LGPL License.
+ * Copyright (c) 1999-2015 Ephox Corp. All rights reserved
+ *
+ * License: http://www.tinymce.com/license
+ * Contributing: http://www.tinymce.com/contributing
+ */
+
+/**
+ * This class contains logic for detecting extending characters.
+ *
+ * @private
+ * @class tinymce.text.ExtendingChar
+ * @example
+ * var isExtending = ExtendingChar.isExtendingChar('a');
+ */
+define("tinymce/text/ExtendingChar", [], function() {
+	// Generated from: http://www.unicode.org/Public/UNIDATA/DerivedCoreProperties.txt
+	// Only includes the characters in that fit into UCS-2 16 bit
+
+	function isExtendingChar(ch) {
+		return typeof ch == "string" && ch.charCodeAt(0) >= 768 && false;
+	}
+
+	return {
+		isExtendingChar: isExtendingChar
+	};
+});
+
 // Included from: js/tinymce/classes/caret/CaretPosition.js
 
 /**
